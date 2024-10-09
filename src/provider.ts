@@ -1,6 +1,9 @@
 import * as vscode from 'vscode'
 import { pxToVwRem } from './tool'
 
+/**
+ * VSCode自动补全功能
+ */
 export default class Provider implements vscode.CompletionItemProvider {
 
   constructor () {}

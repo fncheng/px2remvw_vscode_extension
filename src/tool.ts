@@ -1,20 +1,19 @@
 import * as vscode from 'vscode'
-const { baseWidth, fixedDigits, remUnit } = vscode.workspace.getConfiguration('config')
+const { baseWidth, baseHeight, fixedDigits, remUnit } = vscode.workspace.getConfiguration('config')
 
 /**
- * @description: 
+ * @description:
  * @param {String} text 输入的px值
  * @param {any} vscode
  * @return {*}
  */
-function pxToVwRem (text: String, vscode: any) {
-
+function pxToVwRem(text: String, vscode: any) {
   const rePx: RegExp = /([-]?[\d.]+)p(x)?/
-  const match : any = text.match(rePx)
+  const match: any = text.match(rePx)
 
   if (!match) return
 
-  const pxValue = +(match[1])
+  const pxValue = +match[1]
   const vwValue = +(match[1] / (baseWidth / 100)).toFixed(fixedDigits)
   const remValue = +(match[1] / remUnit).toFixed(fixedDigits)
 
@@ -24,26 +23,26 @@ function pxToVwRem (text: String, vscode: any) {
     vw: `${vwValue}vw`,
     pxValue,
     remValue,
-    vwValue,
+    vwValue
   }
 }
 
-function vwToPx (text: String) {
-
+function vwToPx(text: String) {
   const vw: number = +text.split('vw')[0]
 
-  return `${Math.round(baseWidth / 100 * vw)} px`
+  return `${Math.round((baseWidth / 100) * vw)} px`
 }
 
-function remToPx (text: String) {
+function vhToPx(text: string) {
+  const vh: number = +text.split('vh')[0]
 
+  return `${Math.round((baseHeight / 100) * vh)} px`
+}
+
+function remToPx(text: String) {
   const rem: number = +text.split('rem')[0] // 拿到rem的数值
 
   return `${Math.round(remUnit * rem)} px`
 }
 
-export {
-  pxToVwRem,
-  vwToPx,
-  remToPx,
-}
+export { pxToVwRem, vwToPx, vhToPx, remToPx }

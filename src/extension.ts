@@ -2,7 +2,7 @@ import * as vscode from 'vscode'
 import Provider from './provider'
 import Decorator from './decorator'
 
-const LANS: Array<string> = ['html', 'vue', 'css', 'less', 'scss', 'sass', 'stylus']
+const LANS: Array<string> = ['html', 'vue', 'css', 'less', 'scss', 'sass', 'stylus', 'typescriptreact']
 
 export function activate (context: vscode.ExtensionContext) {
 
@@ -13,6 +13,11 @@ export function activate (context: vscode.ExtensionContext) {
   const vwStyle = vscode.window.createTextEditorDecorationType({
 		cursor,
 		color: vwColor
+  })
+
+  const vhStyle = vscode.window.createTextEditorDecorationType({
+    cursor,
+    color: vwColor
   })
 
   const remStyle = vscode.window.createTextEditorDecorationType({
@@ -30,6 +35,7 @@ export function activate (context: vscode.ExtensionContext) {
   new Decorator({
     context,
     vwStyle,
+    vhStyle,
     remStyle,
   })
 
