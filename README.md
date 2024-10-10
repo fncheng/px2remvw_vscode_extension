@@ -30,6 +30,4 @@
 - `config.baseWidth` 设计稿宽度, 默认 1920px
 - `config.baseHidth` 设计稿高度, 默认 1080px
 - `config.cursor` 指针样式
-- `config.vwColor` vw 的字体颜色
-- `config.remColor` rem 的字体颜色
 - `config.remUnit` 1rem 转 px 大小, 默认 16px

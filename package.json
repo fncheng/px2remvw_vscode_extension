@@ -69,16 +69,6 @@
           "default": "wait",
           "description": "指针样式"
         },
-        "config.vwColor": {
-          "type": "string",
-          "default": "#f00",
-          "description": "vw的字体颜色"
-        },
-        "config.remColor": {
-          "type": "string",
-          "default": "#f00",
-          "description": "rem的字体颜色"
-        },
         "config.remUnit": {
           "type": "number",
           "default": 16,
