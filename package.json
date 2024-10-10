@@ -2,7 +2,7 @@
   "name": "px2remvw2",
   "publisher": "fncheng",
   "displayName": "px2remvw2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "licenseUrl": "LICENSE",
   "description": "把px转成rem 或vw，并且能显示rem、vw对应的px值",
