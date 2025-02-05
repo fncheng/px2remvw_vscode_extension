@@ -2,7 +2,7 @@
 
 ## px2remvw
 
-把 px 转成 rem 或 vw，并且能显示 rem、vw 对应的 px 值
+把 px 转成 rem 或 vw，并且能显示 rem、vw 对应的 px 值，支持在jsx、tsx中显示
 
 ![演示图](screenshots/1.gif)
 
